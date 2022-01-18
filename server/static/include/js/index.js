@@ -26,7 +26,7 @@ var app = new Vue({
   methods: {
     fetchStatus: function () {
       var self = this;
-      fetch('/status?validators=' + (this.ready ? '1' : '')).then(function (response) {
+      fetch('status?validators=' + (this.ready ? '1' : '')).then(function (response) {
         if (response.ok) {
           response.json().then(function (result) {
             var prev_ready = self.ready;
@@ -134,7 +134,7 @@ var app = new Vue({
         info.did = this.reg_info.did;
         info.verkey = this.reg_info.verkey;
       }
-      fetch('/register', {
+      fetch('register', {
         method: 'POST',
         body: JSON.stringify(info),
         headers: {

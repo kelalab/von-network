@@ -13,7 +13,7 @@ concurrency:
 jobs:
   push_to_registry:
     # Ensure this only runs on the main repository so we're not publishing images to other repositories.
-    if: ${{ github.event.repository.full_name == 'bcgov/von-network' }}
+    #if: ${{ github.event.repository.full_name == 'bcgov/von-network' }}
 
     name: Push Docker image to GitHub Packages
     runs-on: ubuntu-latest
