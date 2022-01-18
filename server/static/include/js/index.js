@@ -27,7 +27,7 @@ var app = new Vue({
     fetchStatus: function () {
       var self = this;
       console.log('context', ctx_path);
-      fetch('{{ CTX_PATH }}status?validators=' + (this.ready ? '1' : '')).then(function (response) {
+      fetch(`${ ctx_path }status?validators=` + (this.ready ? '1' : '')).then(function (response) {
         if (response.ok) {
           response.json().then(function (result) {
             var prev_ready = self.ready;
