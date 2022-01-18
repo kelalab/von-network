@@ -38,6 +38,8 @@ LOGGER.info(
 )
 
 CTX_PATH = os.getenv("CTX_PATH")
+LOGGER.info('Context path is set to "%s"', CTX_PATH)
+
 INFO_SITE_URL = os.getenv("INFO_SITE_URL")
 INFO_SITE_TEXT = os.getenv("INFO_SITE_TEXT") or os.getenv("INFO_SITE_URL")
 
@@ -57,7 +59,7 @@ async def index(request):
         "WEB_ANALYTICS_SCRIPT": WEB_ANALYTICS_SCRIPT,
         "INFO_SITE_TEXT": INFO_SITE_TEXT,
         "INFO_SITE_URL": INFO_SITE_URL,
-        "CTX_PATH": CTX_PATH
+        "CTX_PATH": CTX_PATH,
     }
 
 
@@ -69,7 +71,7 @@ async def browse(request):
         "WEB_ANALYTICS_SCRIPT": WEB_ANALYTICS_SCRIPT,
         "INFO_SITE_TEXT": INFO_SITE_TEXT,
         "INFO_SITE_URL": INFO_SITE_URL,
-        "CTX_PATH": CTX_PATH
+        "CTX_PATH": CTX_PATH,
     }
 
 
