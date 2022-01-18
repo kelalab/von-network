@@ -88,7 +88,7 @@
               View detailed information about the status of the running validator nodes:
             </p>
             <p>
-              <a href="{{ CTX_PATH }}status/text" class="tool"><span class="fa fa-chevron-right left"></span>Detailed Status</a>
+              <a href="{% endraw %}{{ CTX_PATH }}{% raw %}status/text" class="tool"><span class="fa fa-chevron-right left"></span>Detailed Status</a>
             </p>
           </div>
         </div>
@@ -114,9 +114,9 @@
             <p>
               <a href="{% endraw %}{{ CTX_PATH }}{% raw %}browse/domain" class="tool"><span class="fa fa-chevron-right left"></span>Domain</a>
               <br>
-              <a href="{{ CTX_PATH }}browse/pool" class="tool"><span class="fa fa-chevron-right left"></span>Pool</a>
+              <a href="{% endraw %}{{ CTX_PATH }}{% raw %}browse/pool" class="tool"><span class="fa fa-chevron-right left"></span>Pool</a>
               <br>
-              <a href="{{ CTX_PATH }}browse/config" class="tool"><span class="fa fa-chevron-right left"></span>Config</a>
+              <a href="{% endraw %}{{ CTX_PATH }}{% raw %}browse/config" class="tool"><span class="fa fa-chevron-right left"></span>Config</a>
             </p>
           </div>
         </div>
@@ -135,7 +135,7 @@
               Download the genesis transaction file to connect to the network.
             </p>
             <div class="form-group">
-              <a href="{{ CTX_PATH }}genesis" class="tool-button"><span class="fa fa-download left"></span>Genesis Transaction</a>
+              <a href="{% endraw %}{{ CTX_PATH }}{% raw %}genesis" class="tool-button"><span class="fa fa-download left"></span>Genesis Transaction</a>
               <span class="tool-tag">JSON</span>
             </div>
           </div>
