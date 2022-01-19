@@ -159,6 +159,7 @@ var app = new Vue({
       this.navToPage(null, { page: 1, query: '', txn_type: '' });
     },
     entryUrl: function (ident) {
+      console.log('entryUrl', window.location.pathname);
       var url = '/browse/' + this.ledger;
       if (ident) url += '/' + ident;
       return url;
