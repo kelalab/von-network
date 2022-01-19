@@ -26,7 +26,8 @@ var app = new Vue({
   methods: {
     fetchStatus: function () {
       var self = this;
-      fetch(`${ window.location.pathname }/status?validators=` + (this.ready ? '1' : '')).then(function (response) {
+      const path = window.location.pathname;
+      fetch(`${ path }/status?validators=` + (this.ready ? '1' : '')).then(function (response) {
         if (response.ok) {
           response.json().then(function (result) {
             var prev_ready = self.ready;

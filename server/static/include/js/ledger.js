@@ -118,6 +118,7 @@ var app = new Vue({
       this.page_size = parseInt(query.page_size || 10, 10);
       var path = document.location.pathname;
       path = path.replace(/^.*\/browse\//, '');
+      console.log('loadpageparams', path);
       var parts = path.split('/');
       this.ledger = parts[0] || 'domain';
       this.ident = parts[1] || null;
@@ -181,7 +182,7 @@ var app = new Vue({
     loadPage: function () {
       this.loading = true;
       let currentPath = window.location.pathname;
-      let browsestart = currentPath.indexOf('browse');
+      let browsestart = currentPath.indexOf('/browse');
       let toctx = currentPath.substring(0, browsestart);
       console.log('toctx', toctx);
       var url = toctx + '/ledger/' + encodeURIComponent(this.ledger)
