@@ -160,7 +160,10 @@ var app = new Vue({
     },
     entryUrl: function (ident) {
       console.log('entryUrl', window.location.pathname);
-      var url = '/browse/' + this.ledger;
+      let currentPath = window.location.pathname;
+      let browsestart = currentPath.indexOf('/browse');
+      let toctx = currentPath.substring(0, browsestart);
+      var url = toctx + '/browse/' + this.ledger;
       if (ident) url += '/' + ident;
       return url;
     },
