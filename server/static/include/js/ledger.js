@@ -180,9 +180,9 @@ var app = new Vue({
     },
     loadPage: function () {
       this.loading = true;
-      let currentPath = window.location.path;
+      let currentPath = window.location.pathname;
       let browsestart = currentPath.indexOf('browse');
-      let toctx = window.location.subString(0, browsestart);
+      let toctx = currentPath.subString(0, browsestart);
       console.log('toctx', toctx);
       var url = toctx + '/ledger/' + encodeURIComponent(this.ledger)
       var ident = this.ident;
